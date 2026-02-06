@@ -22,6 +22,21 @@
   height: 220px;
 }
 
+.main .row {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents image from dropping */
+  align-items: flex-start; /* Align top of columns */
+  gap: 2rem; /* optional spacing between columns */
+}
+
+/* Mobile responsive */
+@media (max-width: 720px) {
+  .main .row {
+    flex-direction: column;
+  }
+}
+
+
 @media (max-width: 720px) {
   .logo-scoops {
     width: 220px;
@@ -35,3 +50,4 @@
     gap: 40px;
   }
 }
+
