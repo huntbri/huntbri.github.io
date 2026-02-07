@@ -1,53 +1,273 @@
-.logo-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-  flex-wrap: wrap;
-  margin: 0;
+/* GOOGLE FONTS USED: Montserrat for headings/buttons, Inter for body text */
+
+/* GENERAL STYLES */
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #fff;
+    background: #1e1e2f; /* dark background */
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
-  object-fit: contain;
-  display: block;
+a {
+    text-decoration: none;
+    color: #6c63ff;
+    transition: color 0.3s;
 }
 
-.logo-scoops {
-  width: 350px;
-  height: 350px;
+a:hover {
+    color: #ff6584;
 }
 
-.logo-found {
-  width: 220px;
-  height: 220px;
+/* HERO HEADER */
+/* HERO HEADER — FORCE SIZE OVERRIDE */
+#header {
+    background: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
+    color: #fff;
+    text-align: center;
+    padding: 160px 20px;
 }
 
-.main .row {
-  display: flex;
-  flex-wrap: nowrap; /* Prevents image from dropping */
-  align-items: flex-start; /* Align top of columns */
-  gap: 2rem; /* optional spacing between columns */
+#header .inner h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 5rem !important;
+    margin-bottom: 0.75rem;
 }
 
-/* Mobile responsive */
-@media (max-width: 720px) {
-  .main .row {
+#header .inner p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.75rem !important;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem;
+    opacity: 0.95;
+}
+
+#header .button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    background: #6c63ff;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center; /* vertically center text */
+    justify-content: center;
+}
+#header .button:hover {
+    background: #ff6584;
+    color: #fff;
+}
+
+/* PROJECTS */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 80px 0;
+}
+.project.style2 {
+    flex-direction: row-reverse;
+}
+
+/* Alternating backgrounds for contrast */
+.project.style1 {
+    background: #2a2a3f; /* darker blue */
+}
+.project.style2 {
+    background: #1e1e2f; /* slightly darker */
+}
+
+.project-text {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.project-text h2,
+.project-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff; /* white default */
+    transition: color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.project-text h2:hover,
+.project-title:hover {
+    color: #ff6584; /* pink on hover */
+}
+
+.project-text p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+/* All "Role" white and extra bold */
+.project-text p strong,
+.project-text p .role-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* Project Images */
+.project-image {
+    flex: 1;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.project-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* PROJECT TAGS */
+.project-tags {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.project-tags span {
+    background: #ff6584;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+/* LOGO DESIGNS SECTION */
+.logo-section {
+    background: #1e1e2f;
+    padding: 80px 20px;
+    color: #fff;
+}
+
+.logo-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.logo-images {
+    flex: 1 1 50%; /* left column */
+    display: flex;
     flex-direction: column;
-  }
+    gap: 20px; /* smaller gap so bigger images fit */
+    align-items: flex-start;
+}
+
+.logo-images img {
+    width: 150%;       /* slightly bigger */
+    max-width: 500px;  /* larger max width */
+    border-radius: 10px;
+    padding: 0;
+    object-fit: contain;
 }
 
 
+
+
+.logo-text {
+    flex: 1 1 50%; /* right column */
+    padding: 10px 20px;
+}
+
+.logo-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.logo-text h2:hover {
+    color: #ff6584;
+}
+
+.logo-text p {
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.logo-text p strong {
+    font-weight: 900;
+    color: #fff;
+}
+
+/* FOOTER */
+#footer {
+    text-align: center;
+    padding: 80px 20px;
+    background: #1b1b28;
+    color: #fff;
+}
+
+#footer h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#footer p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.icons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.icons li a {
+    display: inline-block;
+    color: #6c63ff;
+    font-size: 1.8rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icons li a:hover {
+    color: #ff6584;
+    transform: scale(1.2);
+}
+
+/* MOBILE RESPONSIVE */
 @media (max-width: 720px) {
-  .logo-scoops {
-    width: 220px;
-    height: 220px;
-  }
-  .logo-found {
-    width: 150px;
-    height: 150px;
-  }
-  .logo-image {
-    gap: 40px;
-  }
+    .project {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .logo-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-images {
+        width: 100%;
+        gap: 15px;
+        align-items: center; /* center images on mobile */
+    }
+    .logo-images img {
+        max-width: 150px;
+        width: 70%;
+    }
+    .logo-text {
+        width: 100%;
+    }
 }
-
