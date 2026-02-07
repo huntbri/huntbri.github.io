@@ -1,12 +1,9 @@
-/* GOOGLE FONTS USED: Montserrat for headings/buttons, Inter for body text */
-
-/* GENERAL STYLES */
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     color: #fff;
-    background: #1e1e2f; /* dark background */
+    background: #1e1e2f;
     margin: 0;
     padding: 0;
 }
@@ -21,8 +18,8 @@ a:hover {
     color: #ff6584;
 }
 
-/* HERO HEADER */
-/* HERO HEADER — FORCE SIZE OVERRIDE */
+/* HEADER */
+
 #header {
     background: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
     color: #fff;
@@ -33,13 +30,13 @@ a:hover {
 #header .inner h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 5rem !important;
+    font-size: 5rem;
     margin-bottom: 0.75rem;
 }
 
 #header .inner p {
     font-family: 'Inter', sans-serif;
-    font-size: 1.75rem !important;
+    font-size: 1.75rem;
     line-height: 1.6;
     max-width: 1000px;
     margin: 0 auto 2.5rem;
@@ -55,9 +52,10 @@ a:hover {
     border-radius: 50px;
     transition: 0.3s;
     display: flex;
-    align-items: center; /* vertically center text */
+    align-items: center;
     justify-content: center;
 }
+
 #header .button:hover {
     background: #ff6584;
     color: #fff;
@@ -75,12 +73,11 @@ a:hover {
     flex-direction: row-reverse;
 }
 
-/* Alternating backgrounds for contrast */
 .project.style1 {
-    background: #2a2a3f; /* darker blue */
+    background: #2a2a3f;
 }
 .project.style2 {
-    background: #1e1e2f; /* slightly darker */
+    background: #1e1e2f;
 }
 
 .project-text {
@@ -93,14 +90,14 @@ a:hover {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    color: #fff; /* white default */
+    color: #fff;
     transition: color 0.3s;
     margin-bottom: 1rem;
 }
 
 .project-text h2:hover,
 .project-title:hover {
-    color: #ff6584; /* pink on hover */
+    color: #ff6584; 
 }
 
 .project-text p {
@@ -109,7 +106,7 @@ a:hover {
     margin-bottom: 0.5rem;
 }
 
-/* All "Role" white and extra bold */
+/* BOLD */
 .project-text p strong,
 .project-text p .role-text {
     font-family: 'Montserrat', sans-serif;
@@ -117,7 +114,7 @@ a:hover {
     color: #fff;
 }
 
-/* Project Images */
+/* IMAGES */
 .project-image {
     flex: 1;
     text-align: center;
@@ -135,7 +132,7 @@ a:hover {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-/* PROJECT TAGS */
+/* TAGS */
 .project-tags {
     margin-top: 10px;
     display: flex;
@@ -150,7 +147,7 @@ a:hover {
     font-size: 0.85rem;
 }
 
-/* LOGO DESIGNS SECTION */
+/* LOGO DESIGNS */
 .logo-section {
     background: #1e1e2f;
     padding: 80px 20px;
@@ -164,26 +161,23 @@ a:hover {
 }
 
 .logo-images {
-    flex: 1 1 50%; /* left column */
+    flex: 1 1 50%;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* smaller gap so bigger images fit */
+    gap: 20px; 
     align-items: flex-start;
 }
 
 .logo-images img {
-    width: 150%;       /* slightly bigger */
-    max-width: 500px;  /* larger max width */
+    width: 150%; 
+    max-width: 500px;
     border-radius: 10px;
     padding: 0;
     object-fit: contain;
 }
 
-
-
-
 .logo-text {
-    flex: 1 1 50%; /* right column */
+    flex: 1 1 50%;
     padding: 10px 20px;
 }
 
@@ -248,7 +242,7 @@ a:hover {
     transform: scale(1.2);
 }
 
-/* MOBILE RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 720px) {
     .project {
         flex-direction: column !important;
@@ -261,7 +255,7 @@ a:hover {
     .logo-images {
         width: 100%;
         gap: 15px;
-        align-items: center; /* center images on mobile */
+        align-items: center;
     }
     .logo-images img {
         max-width: 150px;
