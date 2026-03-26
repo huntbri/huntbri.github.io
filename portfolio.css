@@ -132,6 +132,23 @@ a:hover {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
+.project-image p {
+    color: #fff;
+    margin-top: 12px;
+}
+
+.project-image p a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.project-image p a:hover {
+    color: #ff6584;
+}
+
+.project-image p a strong {
+    color: inherit;
+}
 /* TAGS */
 .project-tags {
     margin-top: 10px;
